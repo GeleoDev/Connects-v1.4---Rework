@@ -1,0 +1,354 @@
+/* Ficha de producto — estética Connects -c */
+.pd-wrap {
+  padding-top: calc(var(--nav-h) + 1.25rem);
+  padding-bottom: 3rem;
+}
+
+.pd-layout {
+  display: grid;
+  gap: 1.75rem;
+}
+
+@media (min-width: 960px) {
+  .pd-layout {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2rem;
+    align-items: start;
+  }
+}
+
+.pd-gallery {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #0a121e;
+  padding: 1.25rem;
+  display: grid;
+  place-items: center;
+  min-height: 260px;
+}
+
+.pd-gallery.peplink {
+  background: #111;
+}
+
+.pd-gallery.must {
+  background: #0a1210;
+}
+
+.pd-gallery img {
+  width: 100%;
+  max-width: 520px;
+  max-height: 340px;
+  object-fit: contain;
+}
+
+.pd-block {
+  margin-top: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 1.25rem 1.2rem;
+}
+
+.pd-block h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+}
+
+.pd-block p {
+  color: var(--text-dim);
+  margin: 0;
+  line-height: 1.55;
+}
+
+.pd-drop {
+  margin-top: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.pd-drop-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.pd-drop-toggle h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.pd-drop-toggle i {
+  color: var(--cyan);
+  transition: transform 0.25s var(--ease);
+}
+
+.pd-drop.is-open .pd-drop-toggle i {
+  transform: rotate(180deg);
+}
+
+.pd-drop-panel {
+  display: none;
+  padding: 0 1.15rem 1.15rem;
+  border-top: 1px solid var(--border);
+}
+
+.pd-drop.is-open .pd-drop-panel {
+  display: block;
+}
+
+.pd-drop-panel ul {
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.pd-drop-panel li {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  color: var(--text-dim);
+  font-size: 0.94rem;
+  line-height: 1.4;
+}
+
+.pd-drop-panel li i {
+  color: var(--cyan);
+  margin-top: 0.2rem;
+}
+
+.pd-drop.must .pd-drop-toggle i,
+.pd-drop.must .pd-drop-panel li i {
+  color: var(--must-mint);
+}
+
+.pd-specs {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.85rem;
+}
+
+.pd-spec {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 0.75rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.92rem;
+}
+
+.pd-spec:last-child {
+  border-bottom: 0;
+}
+
+.pd-spec-label {
+  color: var(--text-mute);
+}
+
+.pd-spec-value {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.pd-aside {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  padding: 1.35rem 1.25rem 1.5rem;
+}
+
+@media (min-width: 960px) {
+  .pd-aside {
+    position: sticky;
+    top: calc(var(--nav-h) + 1rem);
+  }
+}
+
+.pd-aside.peplink {
+  border-color: rgba(255, 184, 28, 0.25);
+  background:
+    radial-gradient(circle at 90% 0%, rgba(255, 184, 28, 0.12), transparent 45%),
+    linear-gradient(180deg, #121212, #050505);
+}
+
+.pd-aside.must {
+  border-color: rgba(124, 255, 178, 0.22);
+  background:
+    radial-gradient(circle at 90% 0%, rgba(124, 255, 178, 0.12), transparent 45%),
+    linear-gradient(180deg, #0b3d2e, #041912);
+}
+
+.pd-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--cyan);
+  margin-bottom: 0.65rem;
+}
+
+.pd-aside.peplink .pd-eyebrow {
+  color: var(--peplink-orange);
+}
+
+.pd-aside.must .pd-eyebrow {
+  color: var(--must-mint);
+}
+
+.pd-aside h1 {
+  font-size: clamp(1.45rem, 3vw, 1.9rem);
+  margin: 0 0 1rem;
+  line-height: 1.15;
+}
+
+.pd-price {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.pd-price strong {
+  display: block;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  margin-bottom: 0.25rem;
+}
+
+.pd-price p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.88rem;
+}
+
+.pd-aside .btn {
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0.65rem;
+}
+
+.pd-note {
+  color: var(--text-mute);
+  font-size: 0.86rem;
+  margin: 0 0 1.15rem;
+  line-height: 1.45;
+}
+
+.pd-box {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.pd-box h3 {
+  margin: 0 0 0.55rem;
+  font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.pd-box h3 i {
+  color: var(--cyan);
+}
+
+.pd-aside.peplink .pd-box h3 i {
+  color: var(--peplink-orange);
+}
+
+.pd-aside.must .pd-box h3 i {
+  color: var(--must-mint);
+}
+
+.pd-box p,
+.pd-box li {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.pd-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.pd-box li {
+  display: flex;
+  gap: 0.45rem;
+  align-items: flex-start;
+}
+
+.pd-box li i {
+  margin-top: 0.2rem;
+  color: var(--cyan);
+  width: 1rem;
+}
+
+.pd-aside.peplink .pd-box li i {
+  color: var(--peplink-orange);
+}
+
+.pd-aside.must .pd-box li i {
+  color: var(--must-mint);
+}
+
+.pd-social {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pd-social .social-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  justify-content: center;
+  margin-top: 0.85rem;
+}
+
+.pd-social .social-row a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: transform 0.2s var(--ease), border-color 0.2s ease, color 0.2s ease;
+}
+
+.pd-social .social-row a:hover {
+  transform: translateY(-2px);
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.btn-must {
+  background: var(--must-mint);
+  color: #041912;
+  font-weight: 750;
+}
+
+.btn-must:hover {
+  background: #b6ffd6;
+  color: #041912;
+}
