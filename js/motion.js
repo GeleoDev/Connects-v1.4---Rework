@@ -133,9 +133,46 @@
     restart();
   }
 
+  function initOfferDialog() {
+    var dialog = document.querySelector("[data-offer-dialog]");
+    if (!dialog) return;
+    var panels = Array.prototype.slice.call(dialog.querySelectorAll("[data-offer-panel]"));
+    var closeBtn = dialog.querySelector("[data-offer-close]");
+
+    function openOffer(key) {
+      panels.forEach(function (panel) {
+        panel.hidden = panel.getAttribute("data-offer-panel") !== key;
+      });
+      if (typeof dialog.showModal === "function") dialog.showModal();
+    }
+
+    document.querySelectorAll("[data-offer]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        openOffer(btn.getAttribute("data-offer"));
+      });
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function () {
+        dialog.close();
+      });
+    }
+
+    dialog.addEventListener("click", function (event) {
+      var rect = dialog.getBoundingClientRect();
+      var outside =
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom;
+      if (outside || event.target === dialog) dialog.close();
+    });
+  }
+
   function boot() {
     initReveal();
     initHero();
+    initOfferDialog();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
