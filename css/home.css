@@ -783,63 +783,6 @@
   font-size: 0.86rem;
 }
 
-.about-home-mv {
-  display: grid;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-}
-
-@media (min-width: 800px) {
-  .about-home-mv {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.15rem;
-  }
-}
-
-.about-home-mv-card p {
-  color: var(--text-dim);
-  margin: 0.55rem 0 0;
-  font-size: 0.95rem;
-}
-
-.about-home-values {
-  display: grid;
-  gap: 0.85rem;
-}
-
-@media (min-width: 760px) {
-  .about-home-values {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .about-home-values .feature-card {
-    grid-column: span 2;
-  }
-
-  .about-home-values .feature-card:nth-child(4) {
-    grid-column: 2 / span 2;
-  }
-
-  .about-home-values .feature-card:nth-child(5) {
-    grid-column: 4 / span 2;
-  }
-}
-
-.about-home-values .feature-card h3 {
-  margin: 0.65rem 0 0.4rem;
-}
-
-.about-home-values .feature-card p {
-  color: var(--text-dim);
-  font-size: 0.92rem;
-  margin: 0;
-}
-
-.about-home-values .feature-card i {
-  color: var(--cyan);
-  font-size: 1.45rem;
-}
-
 .about-home-cta {
   margin-top: 1.75rem;
 }
