@@ -42,7 +42,7 @@
       '<div class="container footer-grid">' +
       '<div class="footer-brand">' +
       '<img src="' + r + 'assets/img/brand/ConnectsLogo.png" alt="Connects">' +
-      "<p>Telecomunicaciones, fibra óptica y energías ininterrumpidas para operaciones que no pueden detenerse.</p>" +
+      "<p>Soluciones en tecnología segura, eficaz y sustentable.</p>" +
       "</div>" +
       '<div class="footer-col"><h4>Explorar</h4>' +
       '<a href="' + r + 'soluciones/connects/">Soluciones Connects</a>' +

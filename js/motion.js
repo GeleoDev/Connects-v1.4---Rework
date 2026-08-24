@@ -48,7 +48,10 @@
 
     function applyCopy(slide) {
       if (brand) brand.textContent = slide.getAttribute("data-brand") || "Connects";
-      if (title) title.textContent = slide.getAttribute("data-title") || "";
+      if (title) {
+        var rawTitle = slide.getAttribute("data-title") || "";
+        title.innerHTML = rawTitle.replace(/\n/g, "<br>");
+      }
       if (lead) lead.textContent = slide.getAttribute("data-lead") || "";
       if (cta) {
         var href = slide.getAttribute("data-cta-href");

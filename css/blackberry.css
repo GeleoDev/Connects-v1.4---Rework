@@ -1,0 +1,186 @@
+/* BlackBerry solutions — security + unified communications */
+.bb-scope .eyebrow {
+  color: #f0a3ad;
+}
+
+.bb-accent {
+  color: #ff8a9a;
+}
+
+.bb-scope .page {
+  position: relative;
+}
+
+.bb-page-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 58% 36% at 0% 48%, rgba(120, 22, 48, 0.32), transparent 70%),
+    radial-gradient(ellipse 48% 32% at 100% 62%, rgba(28, 48, 92, 0.28), transparent 68%);
+}
+
+.bb-scope .page-hero,
+.bb-scope .section,
+.bb-scope .bb-band,
+.bb-scope .site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.bb-scope .page-hero.has-bg {
+  min-height: 440px;
+}
+
+.bb-scope .page-hero.has-bg .page-hero-bg::after {
+  background:
+    linear-gradient(90deg, rgba(8, 6, 12, 0.78) 0%, rgba(8, 6, 12, 0.42) 50%, rgba(8, 6, 12, 0.22) 100%),
+    linear-gradient(180deg, rgba(8, 6, 12, 0.2), rgba(8, 6, 12, 0.88));
+}
+
+.bb-scope .page-hero-bg img {
+  object-fit: cover;
+  object-position: 72% 40%;
+}
+
+.bb-suite {
+  margin-top: 0.65rem;
+  max-width: 40rem;
+  color: rgba(232, 241, 248, 0.88);
+  font-size: 1.02rem;
+}
+
+.bb-intro {
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .bb-intro {
+    padding-bottom: 2rem;
+  }
+}
+
+.bb-intro h2 {
+  margin-bottom: 0.7rem;
+}
+
+.bb-scope .feature-card i {
+  color: #ff8a9a;
+}
+
+.bb-band {
+  padding: 2.25rem 0 2.5rem;
+}
+
+.bb-split {
+  display: grid;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .bb-split {
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 2.5rem;
+    min-height: 420px;
+  }
+
+  .bb-split.is-flip {
+    grid-template-columns: 0.92fr 1.08fr;
+  }
+}
+
+.bb-split-copy h2 {
+  margin: 0.35rem 0 0.8rem;
+  font-size: clamp(1.55rem, 2.8vw, 2.2rem);
+}
+
+.bb-split-copy .lead {
+  margin-bottom: 1.2rem;
+}
+
+.bb-split-media {
+  position: relative;
+  min-height: 240px;
+  border-radius: calc(var(--radius) + 4px);
+  overflow: hidden;
+}
+
+.bb-split-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  max-height: 430px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 900px) {
+  .bb-split-media img {
+    min-height: 400px;
+  }
+}
+
+.bb-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.95rem;
+}
+
+.bb-points li {
+  display: grid;
+  grid-template-columns: 1.4rem 1fr;
+  gap: 0.7rem;
+  align-items: start;
+  color: var(--text-dim);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.bb-points i {
+  color: #ff8a9a;
+  margin-top: 0.2rem;
+}
+
+.bb-points strong {
+  color: var(--text);
+  font-weight: 650;
+}
+
+.bb-process {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 760px) {
+  .bb-process {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+.bb-process div strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ff8a9a;
+  margin-bottom: 0.4rem;
+}
+
+.bb-process div p {
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.bb-cta {
+  margin-top: 0.5rem;
+  background: linear-gradient(135deg, #2a1018, #12080c);
+  border: 0;
+}
