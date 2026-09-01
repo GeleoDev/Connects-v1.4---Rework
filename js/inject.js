@@ -17,11 +17,12 @@
       '<a class="nav-link" data-nav="soluciones" href="' + r + 'soluciones/">Soluciones <span class="chev">▼</span></a>' +
       '<div class="nav-sub" data-sub-panel>' +
       '<a href="' + r + 'soluciones/connects/"><strong>Conectividad — Connects</strong><small>Infraestructura y redes críticas</small></a>' +
-      '<a href="' + r + 'soluciones/blackberry/"><strong>Cyberseguridad — Blackberry</strong><small>Protección y control empresarial</small></a>' +
+      '<a href="' + r + 'soluciones/blackberry/"><strong>Cyberseguridad — Blackberry</strong><small>UEM, SecuSUITE y AtHoc</small></a>' +
       '<div class="nav-sub-label is-group">Productos disponibles</div>' +
       '<a href="' + r + 'productos/samm/"><strong>Samm Teknoloji</strong><small>Fibra óptica & datacenter</small></a>' +
       '<a href="' + r + 'productos/peplink/"><strong>Peplink</strong><small>SD-WAN · multi-WAN · 5G</small></a>' +
       '<a href="' + r + 'productos/must/"><strong>MUST Energy</strong><small>Solar, storage e inversores</small></a>' +
+      '<a href="' + r + 'productos/sigenergy/"><strong>Sigenergy</strong><small>Storage C&amp;I y granjas solares</small></a>' +
       "</div></div>" +
       '<div class="nav-item"><a class="nav-link" data-nav="alianzas" href="' + r + 'alianzas/">Alianzas</a></div>' +
       '<div class="nav-item"><a class="nav-link" data-nav="sobre-nosotros" href="' + r + 'sobre-nosotros/">Sobre nosotros</a></div>' +
@@ -53,7 +54,8 @@
       '<div class="footer-col"><h4>Marcas</h4>' +
       '<a href="' + r + 'productos/peplink/">Peplink</a>' +
       '<a href="' + r + 'productos/samm/">Samm Teknoloji</a>' +
-      '<a href="' + r + 'productos/must/">MUST Energy</a></div>' +
+      '<a href="' + r + 'productos/must/">MUST Energy</a>' +
+      '<a href="' + r + 'productos/sigenergy/">Sigenergy</a></div>' +
       '<div class="footer-col"><h4>Contacto</h4>' +
       "<ul><li>Tacuarí 1777, CABA</li>" +
       '<li><a href="mailto:ventas@connects.com.ar">ventas@connects.com.ar</a></li>' +

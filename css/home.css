@@ -38,12 +38,62 @@
 }
 
 .hero-slide.hero-must img {
-  object-position: 50% 42%;
+  object-position: 68% 48%;
   transform: scale(1.02);
 }
 
 .hero-slide.hero-must.is-active img {
-  transform: scale(1.04);
+  transform: scale(1.05);
+}
+
+.hero-slide.hero-must::after {
+  background:
+    linear-gradient(180deg, rgba(5, 10, 18, 0.12) 0%, rgba(5, 10, 18, 0.28) 58%, rgba(5, 10, 18, 0.82) 100%),
+    linear-gradient(90deg, rgba(5, 10, 18, 0.78) 0%, rgba(5, 10, 18, 0.42) 34%, rgba(5, 10, 18, 0.08) 58%, transparent 78%);
+}
+
+@media (max-width: 767px) {
+  .hero-slide.hero-must img {
+    object-position: 64% 42%;
+  }
+
+  .hero-slide.hero-must::after {
+    background:
+      linear-gradient(180deg, rgba(5, 10, 18, 0.16) 0%, rgba(5, 10, 18, 0.28) 40%, rgba(5, 10, 18, 0.9) 100%),
+      linear-gradient(90deg, rgba(5, 10, 18, 0.55) 0%, rgba(5, 10, 18, 0.18) 42%, transparent 72%);
+  }
+}
+
+.hero-slide.hero-sige {
+  background: #050a12;
+}
+
+.hero-slide.hero-sige img {
+  object-fit: cover;
+  object-position: 72% 48%;
+  transform: scale(1.02);
+}
+
+.hero-slide.hero-sige.is-active img {
+  transform: scale(1.05);
+}
+
+.hero-slide.hero-sige::after {
+  background:
+    linear-gradient(180deg, rgba(5, 10, 18, 0.16) 0%, rgba(5, 10, 18, 0.34) 52%, rgba(5, 10, 18, 0.88) 100%),
+    linear-gradient(90deg, rgba(5, 10, 18, 0.88) 0%, rgba(5, 10, 18, 0.52) 30%, rgba(5, 10, 18, 0.12) 56%, transparent 76%);
+}
+
+@media (max-width: 767px) {
+  .hero-slide.hero-sige img {
+    object-position: 84% 46%;
+  }
+
+  .hero-slide.hero-sige::after {
+    background:
+      linear-gradient(180deg, rgba(5, 10, 18, 0.18) 0%, rgba(5, 10, 18, 0.28) 38%, rgba(5, 10, 18, 0.92) 100%),
+      linear-gradient(90deg, rgba(5, 10, 18, 0.58) 0%, rgba(5, 10, 18, 0.18) 42%, transparent 72%);
+  }
 }
 
 .hero-slide.hero-peplink {
@@ -60,8 +110,164 @@
   transform: scale(1.05);
 }
 
-.hero-slide.hero-voz img {
-  object-position: 48% 40%;
+.hero-slide.hero-peplink-rv {
+  background: #050a12;
+}
+
+.hero-slide.hero-peplink-rv img {
+  object-fit: cover;
+  object-position: 62% 46%;
+  transform: scale(1.02);
+}
+
+.hero-slide.hero-peplink-rv.is-active img {
+  transform: scale(1.05);
+}
+
+.hero-slide.hero-peplink-rv::after {
+  background:
+    linear-gradient(180deg, rgba(5, 10, 18, 0.14) 0%, rgba(5, 10, 18, 0.32) 55%, rgba(5, 10, 18, 0.86) 100%),
+    linear-gradient(90deg, rgba(5, 10, 18, 0.82) 0%, rgba(5, 10, 18, 0.46) 32%, rgba(5, 10, 18, 0.1) 58%, transparent 76%);
+}
+
+@media (max-width: 767px) {
+  .hero-slide.hero-peplink-rv img {
+    object-position: 72% 42%;
+  }
+
+  .hero-slide.hero-peplink-rv::after {
+    background:
+      linear-gradient(180deg, rgba(5, 10, 18, 0.18) 0%, rgba(5, 10, 18, 0.28) 38%, rgba(5, 10, 18, 0.92) 100%),
+      linear-gradient(90deg, rgba(5, 10, 18, 0.55) 0%, rgba(5, 10, 18, 0.16) 42%, transparent 72%);
+  }
+}
+
+.hero-slide.hero-peplink-catalog {
+  background: #050505;
+}
+
+.hero-slide.hero-peplink-catalog img {
+  object-fit: cover;
+  object-position: 72% 48%;
+  transform: scale(1.02);
+}
+
+.hero-slide.hero-peplink-catalog.is-active img {
+  transform: scale(1.05);
+}
+
+.hero-slide.hero-peplink-catalog::after {
+  background:
+    linear-gradient(180deg, rgba(5, 10, 18, 0.12) 0%, rgba(5, 10, 18, 0.28) 58%, rgba(5, 10, 18, 0.78) 100%),
+    linear-gradient(90deg, rgba(5, 10, 18, 0.82) 0%, rgba(5, 10, 18, 0.48) 32%, rgba(5, 10, 18, 0.12) 58%, transparent 78%);
+}
+
+@media (max-width: 767px) {
+  .hero-slide.hero-peplink-catalog img {
+    object-position: 84% 42%;
+  }
+
+  .hero-slide.hero-peplink-catalog::after {
+    background:
+      linear-gradient(180deg, rgba(5, 10, 18, 0.16) 0%, rgba(5, 10, 18, 0.22) 40%, rgba(5, 10, 18, 0.9) 100%),
+      linear-gradient(90deg, rgba(5, 10, 18, 0.55) 0%, rgba(5, 10, 18, 0.16) 42%, transparent 72%);
+  }
+}
+
+.hero-slide.hero-samm {
+  background: #050a12;
+}
+
+.hero-slide.hero-samm img {
+  object-fit: cover;
+  object-position: 72% 48%;
+  transform: scale(1.02);
+}
+
+.hero-slide.hero-samm.is-active img {
+  transform: scale(1.05);
+}
+
+.hero-slide.hero-samm::after {
+  background:
+    linear-gradient(180deg, rgba(5, 10, 18, 0.12) 0%, rgba(5, 10, 18, 0.28) 58%, rgba(5, 10, 18, 0.78) 100%),
+    linear-gradient(90deg, rgba(5, 10, 18, 0.82) 0%, rgba(5, 10, 18, 0.48) 32%, rgba(5, 10, 18, 0.12) 58%, transparent 78%);
+}
+
+@media (max-width: 767px) {
+  .hero-slide.hero-samm img {
+    object-position: 84% 40%;
+  }
+
+  .hero-slide.hero-samm::after {
+    background:
+      linear-gradient(180deg, rgba(5, 10, 18, 0.16) 0%, rgba(5, 10, 18, 0.22) 40%, rgba(5, 10, 18, 0.9) 100%),
+      linear-gradient(90deg, rgba(5, 10, 18, 0.55) 0%, rgba(5, 10, 18, 0.16) 42%, transparent 72%);
+  }
+}
+
+.hero-slide.hero-bb-athoc {
+  background: #08060c;
+}
+
+.hero-slide.hero-bb-athoc img {
+  object-fit: cover;
+  object-position: 78% 46%;
+  transform: scale(1.02);
+}
+
+.hero-slide.hero-bb-athoc.is-active img {
+  transform: scale(1.05);
+}
+
+.hero-slide.hero-bb-athoc::after {
+  background:
+    linear-gradient(180deg, rgba(8, 6, 12, 0.14) 0%, rgba(8, 6, 12, 0.34) 55%, rgba(8, 6, 12, 0.88) 100%),
+    linear-gradient(90deg, rgba(8, 6, 12, 0.86) 0%, rgba(8, 6, 12, 0.5) 30%, rgba(8, 6, 12, 0.12) 56%, transparent 76%);
+}
+
+@media (max-width: 767px) {
+  .hero-slide.hero-bb-athoc img {
+    object-position: 82% 42%;
+  }
+
+  .hero-slide.hero-bb-athoc::after {
+    background:
+      linear-gradient(180deg, rgba(8, 6, 12, 0.18) 0%, rgba(8, 6, 12, 0.28) 38%, rgba(8, 6, 12, 0.92) 100%),
+      linear-gradient(90deg, rgba(8, 6, 12, 0.58) 0%, rgba(8, 6, 12, 0.18) 42%, transparent 72%);
+  }
+}
+
+.hero-slide.hero-bb-cyber {
+  background: #08060c;
+}
+
+.hero-slide.hero-bb-cyber img {
+  object-fit: cover;
+  object-position: 72% 42%;
+  transform: scale(1.02);
+}
+
+.hero-slide.hero-bb-cyber.is-active img {
+  transform: scale(1.05);
+}
+
+.hero-slide.hero-bb-cyber::after {
+  background:
+    linear-gradient(180deg, rgba(8, 6, 12, 0.16) 0%, rgba(8, 6, 12, 0.32) 52%, rgba(8, 6, 12, 0.86) 100%),
+    linear-gradient(90deg, rgba(8, 6, 12, 0.82) 0%, rgba(8, 6, 12, 0.42) 34%, rgba(8, 6, 12, 0.1) 58%, transparent 78%);
+}
+
+@media (max-width: 767px) {
+  .hero-slide.hero-bb-cyber img {
+    object-position: 62% 44%;
+  }
+
+  .hero-slide.hero-bb-cyber::after {
+    background:
+      linear-gradient(180deg, rgba(8, 6, 12, 0.18) 0%, rgba(8, 6, 12, 0.28) 38%, rgba(8, 6, 12, 0.92) 100%),
+      linear-gradient(90deg, rgba(8, 6, 12, 0.55) 0%, rgba(8, 6, 12, 0.16) 42%, transparent 72%);
+  }
 }
 
 .hero-slide::after {
