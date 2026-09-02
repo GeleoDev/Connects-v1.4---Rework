@@ -77,24 +77,41 @@
 }
 
 .must-scope .card-dark .media {
-  aspect-ratio: 4 / 3;
-  background: #111;
-  display: grid;
-  place-items: center;
-  padding: 0.65rem;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background:
+    radial-gradient(circle at 50% 46%, #15508f 0%, #0a2c55 40%, #061428 78%, #030d1a 100%);
+  display: block;
+  padding: 0;
+  overflow: hidden;
 }
 
 .must-scope .card-dark .media img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 132px;
-  object-fit: contain;
-  margin: 0 auto;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: center 58%;
+  margin: 0;
+  transform: scale(1.34);
+  transform-origin: center 58%;
+}
+
+.must-scope .card-dark .media.is-kit img {
+  object-position: 46% 52%;
+  transform: scale(1.22);
+  transform-origin: 46% 52%;
 }
 
 .must-scope .card-dark:hover .media img {
-  transform: none;
+  transform: scale(1.4);
+}
+
+.must-scope .card-dark:hover .media.is-kit img {
+  transform: scale(1.28);
 }
 
 .must-scope .card-dark .body {
@@ -121,6 +138,9 @@
 }
 
 .must-scope .card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 0.25rem;
   margin-bottom: 0.4rem;
 }
@@ -325,7 +345,8 @@
 
 @media (min-width: 900px) {
   .must-scope .grid-4 {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.85rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 52rem;
   }
 }
