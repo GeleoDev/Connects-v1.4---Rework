@@ -19,8 +19,10 @@
       '<a href="' + r + 'soluciones/connects/"><strong>Conectividad — Connects</strong><small>Infraestructura y redes críticas</small></a>' +
       '<a href="' + r + 'soluciones/blackberry/"><strong>Cyberseguridad — Blackberry</strong><small>UEM, SecuSUITE y AtHoc</small></a>' +
       '<div class="nav-sub-label is-group">Productos disponibles</div>' +
-      '<a href="' + r + 'productos/samm/"><strong>Samm Teknoloji</strong><small>Fibra óptica & datacenter</small></a>' +
+      '<div class="nav-sub-label is-sub">Conectividad e infraestructura</div>' +
       '<a href="' + r + 'productos/peplink/"><strong>Peplink</strong><small>SD-WAN · multi-WAN · 5G</small></a>' +
+      '<a href="' + r + 'productos/samm/"><strong>Samm Teknoloji</strong><small>Fibra óptica & datacenter</small></a>' +
+      '<div class="nav-sub-label is-sub is-split">Energía ininterrumpida</div>' +
       '<a href="' + r + 'productos/must/"><strong>MUST Energy</strong><small>Solar, storage e inversores</small></a>' +
       '<a href="' + r + 'productos/sigenergy/"><strong>Sigenergy</strong><small>Storage C&amp;I y granjas solares</small></a>' +
       "</div></div>" +

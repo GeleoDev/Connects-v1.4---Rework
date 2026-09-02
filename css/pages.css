@@ -594,6 +594,28 @@
 }
 
 /* Alianzas page — cards compactas, logos grandes */
+.alliance-page {
+  display: grid;
+  gap: 2.75rem;
+}
+
+.alliance-group {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.alliance-group-head h2 {
+  margin: 0.2rem 0 0.4rem;
+  font-size: 1.35rem;
+}
+
+.alliance-group-head p {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
 .alliance-cards {
   display: grid;
   gap: 0.85rem;
@@ -608,248 +630,101 @@
 
 .alliance-card {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 132px 1fr;
   align-items: stretch;
-  min-height: 0;
+  min-height: 100%;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface);
   text-decoration: none;
   color: inherit;
   overflow: hidden;
-  transition: transform 0.25s var(--ease), border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 @media (min-width: 520px) {
   .alliance-card {
-    grid-template-columns: 210px 1fr;
+    grid-template-columns: 168px 1fr;
   }
 }
 
+a.alliance-card:hover,
 .alliance-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(62, 198, 255, 0.35);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+  border-color: rgba(62, 198, 255, 0.32);
+  background: var(--surface-2);
 }
 
 .alliance-card-logo {
   display: grid;
   place-items: center;
-  padding: 0.85rem;
-  background:
-    radial-gradient(circle at 50% 40%, rgba(62, 198, 255, 0.16), transparent 60%),
-    #0a121e;
-  border-right: 1px solid var(--border);
-}
-
-.alliance-card.peplink .alliance-card-logo {
-  background:
-    radial-gradient(circle at 50% 40%, rgba(255, 184, 28, 0.2), transparent 60%),
-    #0a0a0a;
-}
-
-.alliance-card.must .alliance-card-logo {
-  background:
-    radial-gradient(circle at 50% 40%, rgba(124, 255, 178, 0.16), transparent 60%),
-    #071410;
-}
-
-.alliance-card.sigenergy .alliance-card-logo {
-  background:
-    radial-gradient(circle at 50% 40%, rgba(26, 212, 192, 0.16), transparent 60%),
-    #071614;
-}
-
-.alliance-card.bb .alliance-card-logo {
-  background:
-    radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.1), transparent 60%),
-    #120a12;
-}
-
-.alliance-card.samm .alliance-card-logo {
-  background:
-    radial-gradient(circle at 40% 30%, rgba(255, 255, 255, 0.55), transparent 50%),
-    linear-gradient(160deg, #b8e4f8 0%, #7ec8ef 48%, #4eb0e0 100%);
+  padding: 1rem 0.85rem;
+  background: #fff;
+  border-right: 1px solid rgba(15, 23, 32, 0.08);
 }
 
 .alliance-card-logo img {
   width: 100%;
   height: auto;
-  max-height: 104px;
+  max-height: 72px;
+  max-width: 132px;
   object-fit: contain;
 }
 
 @media (min-width: 520px) {
   .alliance-card-logo img {
-    max-height: 136px;
+    max-height: 84px;
+    max-width: 148px;
   }
 }
 
-.alliance-card.peplink .alliance-card-logo img,
-.alliance-card.bb .alliance-card-logo img {
-  filter: brightness(0) invert(1);
+.alliance-card-logo img.is-mark {
+  filter: brightness(0);
 }
 
 .alliance-card-body {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  padding: 0.95rem 1rem 1rem;
+  gap: 0.4rem;
+  padding: 1rem 1.05rem 1.05rem;
   min-width: 0;
-}
-
-.alliance-card-body .tag {
-  align-self: flex-start;
-  font-size: 0.68rem;
 }
 
 .alliance-card-body h3 {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
 }
 
 .alliance-card-body p {
   color: var(--text-dim);
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 .alliance-card-go {
   margin-top: auto;
-  padding-top: 0.35rem;
+  padding-top: 0.45rem;
   color: var(--cyan);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  text-decoration: none;
 }
 
-.alliance-card:hover .alliance-card-go i {
+.alliance-card:hover .alliance-card-go i,
+.alliance-card-go:hover i {
   transform: translateX(3px);
 }
 
 .alliance-card-go i {
   transition: transform 0.25s var(--ease);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
 }
 
-.alliance-more {
-  margin-top: 2.5rem;
-}
-
-.alliance-partner-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-
-@media (min-width: 700px) {
-  .alliance-partner-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1000px) {
-  .alliance-partner-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
-.alliance-partner {
-  display: grid;
-  place-items: center;
-  min-height: 156px;
-  padding: 1.25rem 1.35rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.03);
-  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s var(--ease);
-}
-
-.alliance-partner:hover {
-  border-color: rgba(62, 198, 255, 0.35);
-  background: rgba(255, 255, 255, 0.06);
-  transform: translateY(-2px);
-}
-
-.alliance-partner img {
-  width: 100%;
-  height: auto;
-  max-height: 112px;
-  max-width: 250px;
-  object-fit: contain;
-  filter: grayscale(1) brightness(1.35);
-  opacity: 0.9;
-  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-}
-
-@media (min-width: 700px) {
-  .alliance-partner {
-    min-height: 190px;
-    padding: 1.5rem 1.55rem;
-  }
-
-  .alliance-partner img {
-    max-height: 148px;
-    max-width: 280px;
-  }
-}
-
-.alliance-partner:hover img {
-  filter: none;
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-.alliance-partner.invert img {
-  filter: grayscale(1) brightness(0) invert(1);
-  opacity: 0.9;
-}
-
-.alliance-partner.invert:hover img {
-  filter: brightness(0) invert(1);
-  opacity: 1;
-}
-
-.alliance-more.is-light {
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(62, 198, 255, 0.12), transparent 55%),
-    var(--bg-3);
-  border-radius: var(--radius);
-  padding: 2rem 1.15rem 1.35rem;
-  border: 1px solid rgba(62, 198, 255, 0.14);
-}
-
-.alliance-more.is-light h2 {
-  color: var(--text);
-}
-
-.alliance-more.is-light .eyebrow {
-  color: var(--cyan);
-}
-
-.alliance-more.is-light .alliance-partner {
-  background: #e8eef6;
-  border-color: rgba(232, 241, 248, 0.14);
-}
-
-.alliance-more.is-light .alliance-partner:hover {
-  background: #f2f6fb;
-  border-color: rgba(62, 198, 255, 0.4);
-}
-
-.alliance-more.is-light .alliance-partner img,
-.alliance-more.is-light .alliance-partner.invert img {
-  filter: none;
-  opacity: 0.92;
-}
-
-.alliance-more.is-light .alliance-partner:hover img,
-.alliance-more.is-light .alliance-partner.invert:hover img {
-  filter: none;
-  opacity: 1;
+.alliance-page .cta-bar {
+  margin-top: 0.25rem;
 }
 
 /* Brand cards (shared with home) — compactas */

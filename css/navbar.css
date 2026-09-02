@@ -221,6 +221,25 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.nav-sub-label.is-sub {
+  margin-top: 0.45rem;
+  margin-bottom: 0.15rem;
+  padding-top: 0;
+  color: rgba(232, 241, 248, 0.52);
+  letter-spacing: 0.08em;
+  font-size: 0.62rem;
+}
+
+.nav-sub-label.is-group + .nav-sub-label.is-sub {
+  margin-top: 0.28rem;
+}
+
+.nav-sub-label.is-sub.is-split {
+  margin-top: 0.7rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 .nav-sub a {
   display: flex;
   flex-direction: column;
