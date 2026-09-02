@@ -15,7 +15,8 @@
   <link rel="stylesheet" href="./css/navbar.css">
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/home.css">
-  <link rel="preload" href="./assets/img/hero/hero-samm.png" as="image">
+  <link rel="preload" href="./assets/img/hero/hero-must-sm.png" as="image" media="(max-width: 1024px)">
+  <link rel="preload" href="./assets/img/hero/hero-must.png" as="image" media="(min-width: 1025px)">
 </head>
 <body>
   <div data-inject-nav></div>
@@ -24,29 +25,44 @@
     <h1 class="sr-only">Connects — soluciones en tecnología segura, eficaz y sustentable</h1>
     <div class="hero-track">
       <div class="hero-slide is-active" data-hero-slide
-        data-cta-label="Ver Samm Teknoloji"
-        data-cta-href="./productos/samm/">
-        <img src="./assets/img/hero/hero-samm.png" alt="Samm Teknoloji — innovación y calidad en fibra óptica: conectores, empalmes y accesorios para redes FTTH" width="1600" height="600" fetchpriority="high">
-      </div>
-      <div class="hero-slide" data-hero-slide
-        data-cta-label="Ver Peplink"
-        data-cta-href="./productos/peplink/">
-        <img src="./assets/img/hero/hero-peplink.png" alt="Peplink — internet donde y cuando lo necesites: multi-WAN inteligente, seguridad avanzada y redes escalables" width="1600" height="600" loading="lazy">
-      </div>
-      <div class="hero-slide" data-hero-slide
-        data-cta-label="Ver BlackBerry"
-        data-cta-href="./soluciones/blackberry/">
-        <img src="./assets/img/hero/hero-blackberry.png" alt="BlackBerry Secure Communications — comunicación segura y eficaz con AtHoc, SecuSUITE y UEM" width="1600" height="600" loading="lazy">
-      </div>
-      <div class="hero-slide" data-hero-slide
         data-cta-label="Ver MUST Energy"
         data-cta-href="./productos/must/">
-        <img src="./assets/img/hero/hero-must.png" alt="MUST — energía solar en tu hogar con kit solar all in one, inversores y baterías" width="1600" height="600" loading="lazy">
+        <picture>
+          <source media="(max-width: 1024px)" srcset="./assets/img/hero/hero-must-sm.png" width="720" height="600">
+          <img src="./assets/img/hero/hero-must.png" alt="MUST — energía solar en tu hogar con kit solar all in one, inversores y baterías" width="1600" height="600" fetchpriority="high">
+        </picture>
       </div>
       <div class="hero-slide" data-hero-slide
         data-cta-label="Ver Sigenergy"
         data-cta-href="./productos/sigenergy/">
-        <img src="./assets/img/hero/hero-sigenergy.png" alt="Sigenergy — energía solar a gran escala con storage modular para industria y granjas solares" width="1600" height="600" loading="lazy">
+        <picture>
+          <source media="(max-width: 1024px)" srcset="./assets/img/hero/hero-sigenergy-sm.png" width="720" height="600">
+          <img src="./assets/img/hero/hero-sigenergy.png" alt="Sigenergy — energía solar a gran escala con storage modular para industria y granjas solares" width="1600" height="600" loading="lazy">
+        </picture>
+      </div>
+      <div class="hero-slide" data-hero-slide
+        data-cta-label="Ver Samm Teknoloji"
+        data-cta-href="./productos/samm/">
+        <picture>
+          <source media="(max-width: 1024px)" srcset="./assets/img/hero/hero-samm-sm.png" width="720" height="600">
+          <img src="./assets/img/hero/hero-samm.png" alt="Samm Teknoloji — innovación y calidad en fibra óptica: conectores, empalmes y accesorios para redes FTTH" width="1600" height="600" loading="lazy">
+        </picture>
+      </div>
+      <div class="hero-slide" data-hero-slide
+        data-cta-label="Ver Peplink"
+        data-cta-href="./productos/peplink/">
+        <picture>
+          <source media="(max-width: 1024px)" srcset="./assets/img/hero/hero-peplink-sm.png" width="720" height="600">
+          <img src="./assets/img/hero/hero-peplink.png" alt="Peplink — internet donde y cuando lo necesites: multi-WAN inteligente, seguridad avanzada y redes escalables" width="1600" height="600" loading="lazy">
+        </picture>
+      </div>
+      <div class="hero-slide" data-hero-slide
+        data-cta-label="Ver BlackBerry"
+        data-cta-href="./soluciones/blackberry/">
+        <picture>
+          <source media="(max-width: 1024px)" srcset="./assets/img/hero/hero-blackberry-sm.png" width="720" height="600">
+          <img src="./assets/img/hero/hero-blackberry.png" alt="BlackBerry Secure Communications — comunicación segura y eficaz con AtHoc, SecuSUITE y UEM" width="1600" height="600" loading="lazy">
+        </picture>
       </div>
       <div class="hero-nav">
         <button type="button" data-hero-prev aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
@@ -55,7 +71,7 @@
       <div class="hero-inner" data-hero-inner>
         <div class="hero-copy">
           <div class="hero-actions">
-            <a class="btn btn-primary" href="./productos/samm/" data-hero-cta>Ver Samm Teknoloji</a>
+            <a class="btn btn-primary" href="./productos/must/" data-hero-cta>Ver MUST Energy</a>
           </div>
         </div>
         <div class="hero-dots" data-hero-dots></div>

@@ -13,9 +13,15 @@
   width: 100%;
   max-width: 1920px;
   margin-inline: auto;
-  aspect-ratio: 8 / 3;
+  aspect-ratio: 6 / 5;
   overflow: hidden;
   background: var(--bg-0);
+}
+
+@media (min-width: 1025px) {
+  .hero-track {
+    aspect-ratio: 8 / 3;
+  }
 }
 
 .hero-slide {
@@ -30,10 +36,14 @@
   opacity: 1;
 }
 
+.hero-slide picture,
 .hero-slide img {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.hero-slide img {
   object-fit: cover;
 }
 

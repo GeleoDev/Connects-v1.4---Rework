@@ -40,6 +40,11 @@
   min-height: 440px;
 }
 
+.must-scope .logo-row.brand-hero-logo {
+  width: min(17.64rem, 92vw);
+  height: 4.83rem;
+}
+
 .must-scope .page-hero.has-bg .page-hero-bg::after {
   background:
     linear-gradient(90deg, rgba(5, 10, 18, 0.72) 0%, rgba(5, 10, 18, 0.38) 48%, rgba(5, 10, 18, 0.22) 100%),
