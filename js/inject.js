@@ -17,7 +17,7 @@
       '<a class="nav-link" data-nav="soluciones" href="' + r + 'soluciones/">Soluciones <span class="chev">▼</span></a>' +
       '<div class="nav-sub" data-sub-panel>' +
       '<a href="' + r + 'soluciones/connects/"><strong>Conectividad — Connects</strong><small>Infraestructura y redes críticas</small></a>' +
-      '<a href="' + r + 'soluciones/blackberry/"><strong>Cyberseguridad — Blackberry</strong><small>UEM, SecuSUITE y AtHoc</small></a>' +
+      '<a href="' + r + 'soluciones/blackberry/"><strong>Ciberseguridad — Blackberry</strong><small>UEM, SecuSUITE y AtHoc</small></a>' +
       '<div class="nav-sub-label is-group">Productos disponibles</div>' +
       '<div class="nav-sub-label is-sub">Conectividad e infraestructura</div>' +
       '<a href="' + r + 'productos/peplink/"><strong>Peplink</strong><small>SD-WAN · multi-WAN · 5G</small></a>' +

@@ -135,7 +135,8 @@
 }
 
 .peplink-scope .page-hero-bg img {
-  object-position: 78% center;
+  object-fit: cover;
+  object-position: 50% 55%;
 }
 
 @media (min-width: 900px) {

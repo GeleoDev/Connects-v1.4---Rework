@@ -677,10 +677,6 @@ a.alliance-card:hover,
   }
 }
 
-.alliance-card-logo img.is-mark {
-  filter: brightness(0);
-}
-
 .alliance-card-body {
   display: flex;
   flex-direction: column;
