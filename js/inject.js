@@ -1,4 +1,12 @@
 (function () {
+  (function cleanIndexUrl() {
+    if (location.protocol === "file:") return;
+    var path = location.pathname || "";
+    if (!/index\.html$/i.test(path)) return;
+    var next = path.replace(/index\.html$/i, "");
+    history.replaceState(null, "", (next || "/") + location.search + location.hash);
+  })();
+
   function root() {
     var depth = Number(document.documentElement.getAttribute("data-root-depth") || "0");
     return depth ? "../".repeat(depth) : "./";
@@ -8,7 +16,7 @@
     return (
       '<header class="site-header" data-site-header>' +
       '<div class="nav-bar">' +
-      '<a class="nav-logo" href="' + r + 'index.html" aria-label="Connects">' +
+      '<a class="nav-logo" href="' + r + '" aria-label="Connects">' +
       '<img src="' + r + 'assets/img/brand/ConnectsLogo.png" alt="Connects">' +
       "</a>" +
       '<div class="nav-drawer" data-nav-drawer id="nav-drawer">' +
@@ -52,7 +60,8 @@
       '<a href="' + r + 'soluciones/blackberry/">Soluciones Blackberry</a>' +
       '<a href="' + r + 'productos/">Productos</a>' +
       '<a href="' + r + 'alianzas/">Alianzas</a>' +
-      '<a href="' + r + 'sobre-nosotros/">Sobre nosotros</a></div>' +
+      '<a href="' + r + 'sobre-nosotros/">Sobre nosotros</a>' +
+      '<a href="' + r + 'calculadora/">Calculadora HBP 1800</a></div>' +
       '<div class="footer-col"><h4>Marcas</h4>' +
       '<a href="' + r + 'productos/peplink/">Peplink</a>' +
       '<a href="' + r + 'productos/samm/">Samm Teknoloji</a>' +

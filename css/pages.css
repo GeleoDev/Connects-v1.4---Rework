@@ -168,6 +168,13 @@
 .card-dark .go {
   color: var(--cyan);
   font-weight: 650;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+a.card-dark {
+  cursor: pointer;
 }
 
 .card-dark.is-filtered-out {
@@ -556,10 +563,15 @@
   transform: translateY(-3px);
 }
 
-.sol-tile i {
+.sol-tile > i {
   color: var(--cyan);
   font-size: 1.65rem;
   margin-bottom: 0.85rem;
+}
+
+.sol-tile .check-list i {
+  font-size: 0.85rem;
+  margin-bottom: 0;
 }
 
 .sol-tile h3 {
@@ -573,25 +585,78 @@
   position: relative;
 }
 
-.sol-tile details {
-  margin-top: 0.85rem;
+.sol-tile:has(> .sol-more) {
+  justify-content: flex-start;
+}
+
+.sol-tile details.sol-more {
+  margin-top: auto;
+  padding-top: 0.85rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .sol-tile summary {
+  order: 2;
   cursor: pointer;
   color: var(--cyan);
   font-weight: 650;
   font-size: 0.88rem;
   list-style: none;
+  width: fit-content;
 }
 
-.sol-tile summary::-webkit-details-marker {
+.sol-tile summary::-webkit-details-marker,
+.sol-tile summary::marker {
+  display: none;
+  content: "";
+}
+
+.sol-tile summary:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.sol-tile summary .sol-less-label {
   display: none;
 }
 
-.sol-tile .check-list {
-  margin-top: 0.65rem;
+.sol-tile details.is-open summary .sol-more-label {
+  display: none;
+}
+
+.sol-tile details.is-open summary .sol-less-label {
+  display: inline;
+}
+
+.sol-tile details .sol-more-panel {
+  order: 1;
+  display: block;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.55s var(--ease);
+}
+
+.sol-tile details .sol-more-panel .check-list {
+  margin: 0 0 0.85rem;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.4s ease, transform 0.55s var(--ease);
+}
+
+.sol-tile details.is-open .sol-more-panel .check-list {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sol-tile details .sol-more-panel,
+  .sol-tile details .sol-more-panel .check-list {
+    transition: none;
+  }
 }
 
 .sol-cyber {
@@ -928,35 +993,16 @@ a.alliance-card:hover,
 }
 
 .about-mv-card {
-  position: relative;
-  overflow: hidden;
-  min-height: 280px;
-  display: flex;
-  align-items: flex-end;
-  padding: 1.25rem 1.2rem 1.35rem;
+  padding: 1.35rem 1.3rem 1.45rem;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-}
-
-.about-mv-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.about-mv-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(5, 10, 18, 0.42) 0%, rgba(5, 10, 18, 0.88) 58%, rgba(5, 10, 18, 0.94) 100%);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(62, 198, 255, 0.1), transparent 46%),
+    rgba(255, 255, 255, 0.03);
 }
 
 .about-mv-card-body {
   position: relative;
-  z-index: 1;
 }
 
 .about-mv-card-body .eyebrow {
@@ -968,8 +1014,9 @@ a.alliance-card:hover,
 }
 
 .about-mv-card-body p {
-  color: rgba(232, 241, 248, 0.86);
-  font-size: 0.94rem;
+  color: var(--text-dim);
+  font-size: 0.96rem;
+  line-height: 1.6;
   margin: 0 0 0.7rem;
 }
 
@@ -1029,6 +1076,166 @@ a.alliance-card:hover,
   color: var(--text-dim);
   font-size: 0.92rem;
   margin: 0;
+}
+
+.send-screen {
+  flex: 1;
+  display: grid;
+  align-items: center;
+  padding: 2.5rem 0 4rem;
+}
+
+.send-card {
+  max-width: 34rem;
+  margin: 1.15rem auto 0;
+  text-align: center;
+  padding: 2.4rem 1.4rem 2rem;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(62, 198, 255, 0.18), transparent 46%),
+    rgba(255, 255, 255, 0.04);
+  box-shadow: var(--shadow);
+}
+
+.send-card.is-error {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 139, 122, 0.16), transparent 46%),
+    rgba(255, 255, 255, 0.04);
+}
+
+.send-card.is-error .eyebrow {
+  color: #ff8b7a;
+}
+
+.send-card h1 {
+  margin-bottom: 0.65rem;
+}
+
+.send-card .lead {
+  margin-inline: auto;
+}
+
+.send-card .lead a {
+  color: var(--cyan);
+}
+
+.send-mark {
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 1.15rem;
+}
+
+.send-mark svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.send-ring,
+.send-check,
+.send-x {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.send-mark-ok .send-ring,
+.send-mark-ok .send-check {
+  stroke: var(--cyan);
+}
+
+.send-mark-bad .send-ring,
+.send-mark-bad .send-x {
+  stroke: #ff8b7a;
+}
+
+.send-ring {
+  stroke-width: 2.8;
+  stroke-dasharray: 201;
+  stroke-dashoffset: 201;
+  animation: send-draw 0.7s var(--ease) forwards;
+}
+
+.send-check,
+.send-x {
+  stroke-width: 3.2;
+  stroke-dasharray: 52;
+  stroke-dashoffset: 52;
+  animation: send-draw 0.4s var(--ease) 0.48s forwards;
+}
+
+.send-x-late {
+  animation-delay: 0.68s;
+}
+
+.send-mark-ok {
+  filter: drop-shadow(0 0 16px rgba(62, 198, 255, 0.35));
+  animation: send-glow 2.6s ease-in-out 1.1s infinite;
+}
+
+.send-mark-bad {
+  filter: drop-shadow(0 0 14px rgba(255, 139, 122, 0.28));
+  animation: send-shake 0.5s var(--ease) 0.85s both;
+}
+
+.send-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 1.6rem;
+}
+
+@keyframes send-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes send-glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 10px rgba(62, 198, 255, 0.22));
+  }
+  50% {
+    filter: drop-shadow(0 0 22px rgba(62, 198, 255, 0.55));
+  }
+}
+
+@keyframes send-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-6px);
+  }
+  60% {
+    transform: translateX(6px);
+  }
+}
+
+@media (min-width: 768px) {
+  .send-card {
+    padding: 2.75rem 2.25rem 2.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .send-ring,
+  .send-check,
+  .send-x,
+  .send-mark-ok,
+  .send-mark-bad {
+    animation: none;
+  }
+
+  .send-ring,
+  .send-check,
+  .send-x {
+    stroke-dashoffset: 0;
+  }
 }
 
 .about-pillars {

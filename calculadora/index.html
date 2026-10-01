@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" data-root-depth="1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de autonomía HBP 1800 — Connects</title>
+  <meta name="description" content="Estimá cuántas horas aguanta el All-in-One HBP 1800 de MUST con la batería llena, según los electrodomésticos que dejes conectados.">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/calculadora.css">
+</head>
+<body>
+  <div class="page">
+    <div data-inject-nav></div>
+
+    <header class="page-hero calc-hero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Migas">
+          <a href="../">Inicio</a><span>/</span><span>Calculadora</span>
+        </nav>
+        <span class="eyebrow">MUST Energy · All-in-One</span>
+        <h1>Calculadora de autonomía HBP 1800</h1>
+        <p class="lead">Elegí los equipos que querés mantener encendidos y mirá cuántas horas puede sostenerlos la batería llena, sin aporte solar.</p>
+        <ul class="calc-specs" aria-label="Datos del equipo">
+          <li><strong>5.120 Wh</strong><span>Batería de litio</span></li>
+          <li><strong>5.200 W</strong><span>Salida del inversor</span></li>
+          <li><strong>93%</strong><span>Eficiencia máxima</span></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="section calc-section">
+      <div class="container calc-layout">
+        <div class="calc-main">
+          <div class="calc-toolbar">
+            <div class="calc-filters" role="toolbar" aria-label="Filtrar electrodomésticos">
+              <button type="button" class="calc-chip is-active" data-filter="todos" aria-pressed="true">Todos</button>
+              <button type="button" class="calc-chip" data-filter="clima" aria-pressed="false">Clima</button>
+              <button type="button" class="calc-chip" data-filter="frio" aria-pressed="false">Frío</button>
+              <button type="button" class="calc-chip" data-filter="cocina" aria-pressed="false">Cocina</button>
+              <button type="button" class="calc-chip" data-filter="trabajo" aria-pressed="false">Trabajo</button>
+              <button type="button" class="calc-chip" data-filter="hogar" aria-pressed="false">Hogar</button>
+            </div>
+            <button type="button" class="calc-clear" data-clear hidden>Limpiar selección</button>
+          </div>
+          <div class="calc-grid" id="calc-grid" aria-label="Electrodomésticos"></div>
+        </div>
+
+        <aside class="calc-panel" aria-live="polite">
+          <p class="calc-panel-kicker">Batería llena · sin solar</p>
+          <div class="calc-gauge" data-gauge>
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="calc-arc-track" cx="60" cy="60" r="52"></circle>
+              <circle class="calc-arc" data-arc cx="60" cy="60" r="52"></circle>
+            </svg>
+            <div class="calc-gauge-readout">
+              <strong data-hours>—</strong>
+              <span data-hours-unit>horas</span>
+            </div>
+          </div>
+          <p class="calc-panel-sub" data-hours-sub>Elegí uno o más equipos para estimar la autonomía.</p>
+          <dl class="calc-metrics">
+            <div>
+              <dt>Consumo promedio</dt>
+              <dd data-avg>0 W</dd>
+            </div>
+            <div>
+              <dt>Al funcionar a la vez</dt>
+              <dd data-peak>0 W</dd>
+            </div>
+            <div>
+              <dt>Energía usable</dt>
+              <dd data-usable>4.762 Wh</dd>
+            </div>
+          </dl>
+          <p class="calc-warn" data-warn hidden>
+            <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+            <span>Esa carga al funcionar supera los 5.200 W del inversor. El equipo no puede sostenerla toda a la vez.</span>
+          </p>
+          <div class="calc-panel-actions">
+            <a class="btn btn-calc" href="https://wa.me/541171025861?text=Hola%2C%20quiero%20consultar%20por%20el%20All-in-One%20HBP%201800." target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> Consultar este equipo
+            </a>
+            <a class="btn btn-calc-line" href="../productos/must/estacion-energia/">Ver ficha técnica</a>
+          </div>
+        </aside>
+      </div>
+      <div class="container">
+        <p class="calc-note">Estimación con consumos típicos en 230 V y la eficiencia máxima del inversor (93%). La heladera, el freezer y el aire estándar no consumen su potencia de placa todo el tiempo. No reemplaza un dimensionamiento de obra.</p>
+      </div>
+    </section>
+
+    <div data-inject-footer></div>
+  </div>
+  <script src="../js/inject.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/calculadora.js"></script>
+</body>
+</html>

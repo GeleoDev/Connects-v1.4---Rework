@@ -177,8 +177,8 @@
 
 @media (min-width: 900px) {
   .sige-bestseller {
-    grid-template-columns: 1.08fr 0.92fr;
-    gap: 2.25rem;
+    grid-template-columns: 0.92fr 1.08fr;
+    gap: 2rem;
     min-height: 414px;
   }
 }
@@ -187,7 +187,7 @@
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 252px;
+  min-height: 320px;
 }
 
 .sige-bestseller-media::before {
@@ -207,9 +207,9 @@
   position: relative;
   z-index: 1;
   width: auto;
-  max-width: min(100%, 440px);
+  max-width: min(100%, 560px);
   height: auto;
-  max-height: 460px;
+  max-height: 600px;
   object-fit: contain;
   filter: drop-shadow(0 22px 36px rgba(0, 0, 0, 0.5));
 }
